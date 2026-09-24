@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "siteaudit"
+version = "1.0.0"
+description = "Command-line website auditing for freelancers: measure fixable technical issues, nothing invented."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Aaron Svoboda" }]
+requires-python = ">=3.10"
+dependencies = ["requests>=2.31"]
+
+[project.scripts]
+siteaudit = "siteaudit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["siteaudit*"]
